@@ -1,0 +1,153 @@
+﻿:root {
+    --primary: #0d6efd;
+    --bg: #f1f3f6;
+    --card: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: Segoe UI, sans-serif;
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 10px;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+    header h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    header p {
+        margin: 6px 0;
+        font-size: 13px;
+    }
+
+#quote {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.card {
+    background: var(--card);
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .calendar-header button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 6px 10px;
+        cursor: pointer;
+    }
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 12px;
+    text-align: center;
+    margin: 6px 0;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.calendar-day {
+    padding: 10px;
+    background: #fff;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .calendar-day.today {
+        border: 2px solid var(--primary);
+    }
+
+.birthday {
+    background: #d1f5d3;
+}
+
+.anniversary {
+    background: #dbeafe;
+}
+
+.festival {
+    background: #ffe8cc;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .popup.hidden {
+        display: none;
+    }
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.center {
+    text-align: center;
+    font-weight: bold;
+}
+
+#popupBody {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.popup-content button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    margin: 10px;
+    font-size: 13px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Office Daily Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FESTIVAL POPUP -->
+    <div id="festivalPopup" class="popup hidden">
+        <div class="popup-content center">
+            <h2 id="festivalTitle"></h2>
+            <button onclick="closeFestival()">Close</button>
+        </div>
+    </div>
+
+    <!-- 🎂 BIRTHDAY POPUP -->
+    <div id="birthdayPopup" class="popup hidden">
+        <div class="popup-content center">
+            <h2>🎂 Happy Birthday!</h2>
+            <p>
+                Wishing you a very Happy Birthday 🎉🎈<br>
+                May your life be filled with happiness, success,
+                and good health always.
+            </p>
+            <button onclick="closeBirthday()">Close</button>
+        </div>
+    </div>
+
+    <!-- 🏢 WORK ANNIVERSARY POPUP -->
+    <div id="anniversaryPopup" class="popup hidden">
+        <div class="popup-content center">
+            <h2>🏢 Happy Work Anniversary!</h2>
+            <p>
+                Congratulations on your work anniversary 👏<br>
+                Your dedication and hard work are truly appreciated.
+            </p>
+            <button onclick="closeAnniversary()">Close</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <h1>🎅 DASHBOARD 🎅</h1>
+            <p id="today"></p>
+            <p id="quote"></p>
+        </header>
+
+        <!-- NOTIFICATIONS -->
+        <div class="card">
+            <h3>🔔 Notifications</h3>
+            <div id="notifications">Loading...</div>
+        </div>
+
+        <!-- CALENDAR -->
+        <div class="card">
+            <h3>📅 Calendar View</h3>
+
+            <div class="calendar-header">
+                <button id="prevMonth">⬅️</button>
+                <span id="monthLabel"></span>
+                <button id="nextMonth">➡️</button>
+            </div>
+
+            <div class="weekdays">
+                <span>Sun</span><span>Mon</span><span>Tue</span>
+                <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+
+            <div id="calendar"></div>
+        </div>
+
+        <!-- DATE CLICK POPUP -->
+        <div id="eventPopup" class="popup hidden">
+            <div class="popup-content">
+                <h3 id="popupDate" class="center"></h3>
+                <div id="popupBody"></div>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+
+        <footer>Made with laughs 😂 and care ❤️ for a friend at work</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
